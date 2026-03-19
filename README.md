@@ -161,6 +161,12 @@ Explore all **29 public repositories** including tools, experiments, and open so
 
 <br/>
 
+<div align="center">
+  <img src="assets/gitlab-activity-graph.svg" alt="GitLab Contribution Graph" width="95%" />
+</div>
+
+<br/>
+
 ## Let's Connect
 
 <div align="center">

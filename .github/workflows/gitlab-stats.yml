@@ -2,7 +2,7 @@ name: Update GitLab Stats
 
 on:
   schedule:
-    - cron: "0 6 * * 1-5" # Weekdays at 6 AM UTC
+    - cron: "0 6 * * *" # Weekdays at 6 AM UTC
   workflow_dispatch:
 
 permissions:
@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/gitlab-stats.svg assets/gitlab-streak.svg assets/gitlab-langs.svg assets/gitlab-meta.json
+          git add assets/gitlab-stats.svg assets/gitlab-streak.svg assets/gitlab-langs.svg assets/gitlab-activity-graph.svg assets/gitlab-meta.json
           git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "chore: update GitLab stats"
           git push
