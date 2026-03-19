@@ -113,11 +113,12 @@ def fetch_languages(session, base_url, project_ids):
 
 
 def event_dates_from_events(events):
-    dates = set()
+    """Return a list of date strings with duplicates preserved for counting."""
+    dates = []
     for ev in events:
         dt = datetime.fromisoformat(ev["created_at"].replace("Z", "+00:00"))
-        dates.add(dt.date().isoformat())
-    return sorted(dates)
+        dates.append(dt.date().isoformat())
+    return dates
 
 
 # ---------------------------------------------------------------------------
