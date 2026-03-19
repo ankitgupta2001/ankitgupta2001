@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="395" height="175" viewBox="0 0 395 175">
+  <rect width="395" height="175" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="197" y="35" fill="#818cf8" font-size="16" font-weight="700" font-family="'Segoe UI', Ubuntu, sans-serif" text-anchor="middle">GitLab Streak</text>
+  <line x1="25" y1="48" x2="370" y2="48" stroke="#30363d" stroke-width="0.5"/>
+  <text x="197" y="105" fill="#8b949e" font-size="13" font-family="'Segoe UI', Ubuntu, sans-serif" text-anchor="middle">Stats loading  waiting for first Action run...</text>
+</svg>

@@ -134,23 +134,28 @@ Explore all **29 public repositories** including tools, experiments, and open so
 
 <br/>
 
-## GitHub Stats
+## My Contributions
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ankitgupta2001&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=818cf8&text_color=c9d1d9" alt="GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ankitgupta2001&theme=tokyonight&hide_border=true&background=0d1117&ring=818cf8&fire=818cf8&currStreakLabel=818cf8" alt="GitHub Streak" width="48%" />
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat-square&logo=gitlab&logoColor=white" alt="GitLab" />
+
+<img src="https://github-readme-stats.vercel.app/api?username=ankitgupta2001&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=818cf8&icon_color=818cf8&text_color=c9d1d9" alt="GitHub Stats" width="48%" />
+<img src="assets/gitlab-stats.svg" alt="GitLab Stats" width="48%" />
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=ankitgupta2001&theme=tokyonight&hide_border=true&background=0d1117&ring=818cf8&fire=818cf8&currStreakLabel=818cf8" alt="GitHub Streak" width="48%" />
+<img src="assets/gitlab-streak.svg" alt="GitLab Streak" width="48%" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=ankitgupta2001&show_icons=true&theme=tokyonight&layout=compact&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=c9d1d9" alt="GitHub Top Languages" width="48%" />
+<img src="assets/gitlab-langs.svg" alt="GitLab Top Languages" width="48%" />
+
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ankitgupta2001&show_icons=true&theme=tokyonight&layout=compact&hide_border=true&bg_color=0d1117&title_color=818cf8&text_color=c9d1d9" alt="Top Languages" width="55%" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ankitgupta2001&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=818cf8&line=818cf8&point=c4b5fd" alt="Contribution Graph" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ankitgupta2001&theme=tokyo-night&hide_border=true&bg_color=0d1117&color=818cf8&line=818cf8&point=c4b5fd" alt="GitHub Contribution Graph" width="95%" />
 </div>
 
 <br/>
