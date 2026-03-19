@@ -81,26 +81,7 @@ def fetch_user(session, base_url, user_id=None):
 
 
 def fetch_events(session, base_url, user_id):
-    cutoff = datetime.now(timezone.utc) - timedelta(days=365)
-    all_events = []
-    page = 1
-    while page <= 50:
-        resp = gitlab_get(session, base_url, f"/api/v4/users/{user_id}/events", {
-            "per_page": PER_PAGE,
-            "page": page,
-        })
-        batch = resp.json()
-        if not batch:
-            break
-        for ev in batch:
-            created = datetime.fromisoformat(ev["created_at"].replace("Z", "+00:00"))
-            if created < cutoff:
-                return all_events
-            all_events.append(ev)
-        if len(batch) < PER_PAGE:
-            break
-        page += 1
-    return all_events
+    return paginate(session, base_url, f"/api/v4/users/{user_id}/events")
 
 
 def fetch_contributed_projects(session, base_url, user_id):
@@ -245,7 +226,7 @@ def merge_languages(lang_dicts: list[dict]) -> dict:
 def svg_stats_card(contributions, merge_requests, projects, account_count):
     title = "GitLab Stats" if account_count == 1 else f"GitLab Stats ({account_count} accounts)"
     rows = [
-        ("Total Contributions (last year)", str(contributions)),
+        ("Total Contributions", str(contributions)),
         ("Merge Requests", str(merge_requests)),
         ("Projects Contributed To", str(projects)),
     ]
