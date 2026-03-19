@@ -297,71 +297,64 @@ def svg_langs_card(languages):
 
 
 def svg_activity_graph(date_strings):
-    """Generate a line-style contribution graph for the last 52 weeks."""
+    """Generate a bar chart of daily contributions for the last 31 days.
+
+    Uses only rect, text, and line elements — these are the SVG primitives
+    that GitHub's markdown renderer does NOT sanitize away.
+    """
     from collections import Counter
-    from datetime import date as date_type
 
     if not date_strings:
         return _placeholder_svg_wide("No contribution data available")
 
     date_counts = Counter(date_strings)
     today = datetime.now(timezone.utc).date()
-    weeks = 52
-    total_days = weeks * 7
+    num_days = 31
 
-    start = today - timedelta(days=total_days - 1)
-    daily = []
-    for i in range(total_days):
-        d = start + timedelta(days=i)
-        daily.append(date_counts.get(d.isoformat(), 0))
+    days = []
+    for i in range(num_days):
+        d = today - timedelta(days=num_days - 1 - i)
+        days.append((d, date_counts.get(d.isoformat(), 0)))
 
-    max_count = max(daily) or 1
+    max_count = max(c for _, c in days) or 1
 
     width = 840
     height = 200
     pad_left = 50
     pad_right = 20
     pad_top = 45
-    pad_bottom = 35
+    pad_bottom = 30
     graph_w = width - pad_left - pad_right
     graph_h = height - pad_top - pad_bottom
+    bar_gap = 3
+    bar_w = (graph_w - bar_gap * (num_days - 1)) / num_days
+    baseline = pad_top + graph_h
 
-    points = []
-    for i, count in enumerate(daily):
-        x = pad_left + (i / (total_days - 1)) * graph_w
-        y = pad_top + graph_h - (count / max_count) * graph_h
-        points.append((x, y))
-
-    fill_points = [f"{pad_left},{pad_top + graph_h}"]
-    fill_points.extend(f"{x},{y}" for x, y in points)
-    fill_points.append(f"{points[-1][0]},{pad_top + graph_h}")
-    fill_poly = " ".join(fill_points)
-
-    line_pts = " ".join(f"{x},{y}" for x, y in points)
-
-    grid_lines = ""
-    for frac in [0, 0.25, 0.5, 0.75, 1.0]:
-        gy = pad_top + graph_h * (1 - frac)
+    grid = ""
+    for frac in [0.25, 0.5, 0.75, 1.0]:
+        gy = round(baseline - frac * graph_h, 1)
         val = int(max_count * frac)
-        grid_lines += f'  <line x1="{pad_left}" y1="{gy}" x2="{width - pad_right}" y2="{gy}" stroke="{COLORS["border"]}" stroke-width="0.5" stroke-dasharray="4,4"/>\n'
-        grid_lines += f'  <text x="{pad_left - 8}" y="{gy + 4}" fill="{COLORS["muted"]}" font-size="10" text-anchor="end" font-family="\'Segoe UI\', Ubuntu, sans-serif">{val}</text>\n'
+        grid += f'  <line x1="{pad_left}" y1="{gy}" x2="{width - pad_right}" y2="{gy}" stroke="{COLORS["border"]}" stroke-width="0.5"/>\n'
+        grid += f'  <text x="{pad_left - 8}" y="{gy + 4}" fill="{COLORS["muted"]}" font-size="9" text-anchor="end" font-family="\'Segoe UI\', Ubuntu, sans-serif">{val}</text>\n'
 
-    month_labels = ""
-    for i in range(total_days):
-        d = start + timedelta(days=i)
-        if d.day == 1:
-            x = pad_left + (i / (total_days - 1)) * graph_w
-            label = d.strftime("%b")
-            month_labels += f'  <text x="{x}" y="{height - 8}" fill="{COLORS["muted"]}" font-size="10" text-anchor="middle" font-family="\'Segoe UI\', Ubuntu, sans-serif">{label}</text>\n'
+    bars = ""
+    labels = ""
+    for i, (d, count) in enumerate(days):
+        x = round(pad_left + i * (bar_w + bar_gap), 2)
+        bar_h = round((count / max_count) * graph_h, 2) if count else 0
+        y = round(baseline - bar_h, 2)
+        color = COLORS["accent"] if count > 0 else COLORS["border"]
+        bars += f'  <rect x="{x}" y="{y}" width="{round(bar_w, 2)}" height="{bar_h}" rx="2" fill="{color}"/>\n'
+        if d.day == 1 or i == 0 or i == num_days - 1:
+            label = d.strftime("%b %d")
+            lx = round(x + bar_w / 2, 2)
+            labels += f'  <text x="{lx}" y="{height - 8}" fill="{COLORS["muted"]}" font-size="9" text-anchor="middle" font-family="\'Segoe UI\', Ubuntu, sans-serif">{label}</text>\n'
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
   <rect width="{width}" height="{height}" rx="6" fill="{COLORS['bg']}" stroke="{COLORS['border']}" stroke-width="1"/>
-  <text x="{pad_left}" y="28" fill="{COLORS['title']}" font-size="14" font-weight="700" font-family="'Segoe UI', Ubuntu, sans-serif">GitLab Contribution Graph</text>
-{grid_lines}
-  <polygon points="{fill_poly}" fill="{COLORS['accent']}" opacity="0.1"/>
-  <polyline points="{line_pts}" fill="none" stroke="{COLORS['accent']}" stroke-width="1.5" stroke-linejoin="round"/>
-{month_labels}
-</svg>"""
+  <text x="{pad_left}" y="28" fill="{COLORS['title']}" font-size="14" font-weight="700" font-family="'Segoe UI', Ubuntu, sans-serif">GitLab Contribution Graph — Last 31 Days</text>
+  <line x1="{pad_left}" y1="{baseline}" x2="{width - pad_right}" y2="{baseline}" stroke="{COLORS['border']}" stroke-width="0.5"/>
+{grid}{bars}{labels}</svg>"""
 
 
 def _placeholder_svg_wide(message):
