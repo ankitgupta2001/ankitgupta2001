@@ -3,14 +3,14 @@
     "Elastic Run": {
       "contributions": 2362,
       "merge_requests": 529,
-      "projects": 18,
+      "projects": 17,
       "languages": {
-        "Python": 59.4,
-        "Shell": 20.7,
-        "JavaScript": 8.9,
-        "HTML": 5.0,
-        "Mustache": 3.6,
-        "Dockerfile": 1.8,
+        "Python": 62.9,
+        "Shell": 16.1,
+        "JavaScript": 9.4,
+        "HTML": 5.3,
+        "Mustache": 3.8,
+        "Dockerfile": 2.0,
         "CSS": 0.4,
         "Lua": 0.1
       },
@@ -2383,9 +2383,9 @@
   "combined": {
     "total_contributions": 2362,
     "merge_requests": 529,
-    "projects": 18,
+    "projects": 17,
     "current_streak": 2,
     "longest_streak": 6
   },
-  "last_updated": "2026-03-20T07:07:01.451053+00:00"
+  "last_updated": "2026-03-21T06:57:43.962914+00:00"
 }
