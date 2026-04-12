@@ -6,11 +6,11 @@
       "projects": 18,
       "languages": {
         "Python": 64.8,
-        "Shell": 15.2,
+        "Shell": 14.9,
         "JavaScript": 9.1,
-        "HTML": 5.1,
+        "HTML": 5.0,
         "Mustache": 3.6,
-        "Dockerfile": 1.8,
+        "Dockerfile": 2.1,
         "CSS": 0.4,
         "Lua": 0.1
       },
@@ -2542,8 +2542,8 @@
     "total_contributions": 2520,
     "merge_requests": 561,
     "projects": 18,
-    "current_streak": 3,
+    "current_streak": 0,
     "longest_streak": 6
   },
-  "last_updated": "2026-04-11T07:12:33.598284+00:00"
+  "last_updated": "2026-04-12T07:25:58.348893+00:00"
 }
