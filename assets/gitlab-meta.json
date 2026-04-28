@@ -1,7 +1,7 @@
 {
   "accounts": {
     "Elastic Run": {
-      "contributions": 2590,
+      "contributions": 2598,
       "merge_requests": 577,
       "projects": 18,
       "languages": {
@@ -15,6 +15,14 @@
         "Lua": 0.1
       },
       "event_dates": [
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
+        "2026-04-27",
         "2026-04-27",
         "2026-04-27",
         "2026-04-24",
@@ -2609,11 +2617,11 @@
     }
   },
   "combined": {
-    "total_contributions": 2590,
+    "total_contributions": 2598,
     "merge_requests": 577,
     "projects": 18,
     "current_streak": 1,
     "longest_streak": 6
   },
-  "last_updated": "2026-04-27T08:38:51.374395+00:00"
+  "last_updated": "2026-04-28T08:37:08.210132+00:00"
 }
