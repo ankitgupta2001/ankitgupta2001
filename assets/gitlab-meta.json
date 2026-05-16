@@ -7,7 +7,7 @@
       "languages": {
         "Python": 65.2,
         "Shell": 14.9,
-        "JavaScript": 8.7,
+        "JavaScript": 8.6,
         "HTML": 5.1,
         "Mustache": 3.6,
         "Dockerfile": 2.1,
@@ -2960,5 +2960,5 @@
     "current_streak": 2,
     "longest_streak": 6
   },
-  "last_updated": "2026-05-15T09:20:43.531341+00:00"
+  "last_updated": "2026-05-16T08:14:40.901579+00:00"
 }
