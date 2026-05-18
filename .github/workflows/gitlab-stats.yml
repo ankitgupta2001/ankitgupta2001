@@ -2,7 +2,7 @@ name: Update GitLab Stats
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Weekdays at 6 AM UTC
+    - cron: "0 6 * * */7" # Weekdays at 6 AM UTC
   workflow_dispatch:
 
 permissions:
