@@ -2,25 +2,25 @@
   <rect width="395" height="154" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <text x="25" y="35" fill="#818cf8" font-size="16" font-weight="700" font-family="'Segoe UI', Ubuntu, sans-serif">GitLab — Top Languages</text>
   <line x1="25" y1="46" x2="370" y2="46" stroke="#30363d" stroke-width="0.5"/>
-  <rect x="25" y="55" width="216.66" height="12" rx="2" fill="#818cf8"/>
-  <rect x="241.66" y="55" width="53.475" height="12" rx="2" fill="#c4b5fd"/>
-  <rect x="295.135" y="55" width="26.91" height="12" rx="2" fill="#6366f1"/>
-  <rect x="322.045" y="55" width="16.905" height="12" rx="2" fill="#a78bfa"/>
-  <rect x="338.95000000000005" y="55" width="16.905" height="12" rx="2" fill="#7c3aed"/>
-  <rect x="355.855" y="55" width="6.555" height="12" rx="2" fill="#4f46e5"/>
-  <rect x="362.41" y="55" width="5.865" height="12" rx="2" fill="#818cf8"/>
-  <rect x="368.27500000000003" y="55" width="1.725" height="12" rx="2" fill="#c4b5fd"/>
+  <rect x="25" y="55" width="217.35" height="12" rx="2" fill="#818cf8"/>
+  <rect x="242.35" y="55" width="53.475" height="12" rx="2" fill="#c4b5fd"/>
+  <rect x="295.825" y="55" width="26.22" height="12" rx="2" fill="#6366f1"/>
+  <rect x="322.04499999999996" y="55" width="16.905" height="12" rx="2" fill="#a78bfa"/>
+  <rect x="338.94999999999993" y="55" width="16.905" height="12" rx="2" fill="#7c3aed"/>
+  <rect x="355.8549999999999" y="55" width="6.555" height="12" rx="2" fill="#4f46e5"/>
+  <rect x="362.4099999999999" y="55" width="5.865" height="12" rx="2" fill="#818cf8"/>
+  <rect x="368.2749999999999" y="55" width="1.725" height="12" rx="2" fill="#c4b5fd"/>
 
   <circle cx="25" cy="90" r="5" fill="#818cf8"/>
-  <text x="35" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Python 62.8%</text>
+  <text x="35" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Python 63.0%</text>
   <circle cx="125" cy="90" r="5" fill="#c4b5fd"/>
   <text x="135" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Shell 15.5%</text>
   <circle cx="225" cy="90" r="5" fill="#6366f1"/>
-  <text x="235" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">JavaScript 7.8%</text>
+  <text x="235" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">JavaScript 7.6%</text>
   <circle cx="325" cy="90" r="5" fill="#a78bfa"/>
-  <text x="335" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Mustache 4.9%</text>
+  <text x="335" y="94" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">HTML 4.9%</text>
   <circle cx="25" cy="112" r="5" fill="#7c3aed"/>
-  <text x="35" y="116" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">HTML 4.9%</text>
+  <text x="35" y="116" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Mustache 4.9%</text>
   <circle cx="125" cy="112" r="5" fill="#4f46e5"/>
   <text x="135" y="116" fill="#c9d1d9" font-size="11" font-family="'Segoe UI', Ubuntu, sans-serif">Smarty 1.9%</text>
   <circle cx="225" cy="112" r="5" fill="#818cf8"/>
