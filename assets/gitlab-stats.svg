@@ -5,7 +5,7 @@
     <text x="25" y="70" fill="#c9d1d9" font-size="13">Total Contributions</text>
     <text x="370" y="70" fill="#818cf8" font-size="13" font-weight="600" text-anchor="end">5000</text>
     <text x="25" y="102" fill="#c9d1d9" font-size="13">Merge Requests</text>
-    <text x="370" y="102" fill="#818cf8" font-size="13" font-weight="600" text-anchor="end">851</text>
+    <text x="370" y="102" fill="#818cf8" font-size="13" font-weight="600" text-anchor="end">854</text>
     <text x="25" y="134" fill="#c9d1d9" font-size="13">Projects Contributed To</text>
     <text x="370" y="134" fill="#818cf8" font-size="13" font-weight="600" text-anchor="end">22</text>
 </svg>
